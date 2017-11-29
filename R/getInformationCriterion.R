@@ -1,4 +1,4 @@
-#Returns all AIC/BIC/R^2 adjusted based on a list of models and a dataframe
+#Returns all AIC/AICc/BIC/R^2 adjusted based on a list of models and a dataframe
 getInfo <- function(ModelList, df){
   for(i in 1:length(ModelList)){
     p <- length(ModelList[[i]]$coefficients) 
