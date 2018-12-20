@@ -8,7 +8,7 @@ Return: A list of tuples
 import sqlite3
 import pprint
 
-con = sqlite3.connect(...\databaseName.db")
+con = sqlite3.connect(r"...\databaseName.db")
 cursor = con.cursor()
 
 def get_table_names(cursor, display = True):
