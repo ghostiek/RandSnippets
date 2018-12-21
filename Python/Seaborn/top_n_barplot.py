@@ -33,7 +33,7 @@ def top_n_barplot(n, top = True, **kwargs):
     
     #Filter according to necessary data
     top_x = result.index    
-    newdata = data.loc[data[x].isin(top_x.values)]
+    newdata = data.loc[data[x].isin(top_x.values)].copy()
     #Make values categorical and order them
     newdata[x] = pd.Categorical(newdata[x], categories=top_x, ordered=True)
     #Assign new data to use for plot
