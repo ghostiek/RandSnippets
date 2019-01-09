@@ -1,8 +1,16 @@
-def ranged_barplot(start, end, labels, data, hue=None, order=None, hue_order=None,
-            estimator=np.mean, ci=95, n_boot=1000, units=None,
-            orient=None, color=None, palette=None, saturation=.75,
-            errcolor=".26", errwidth=None, capsize=None, dodge=True,
-            ax=None, **kwargs):
+"""
+Plots observations based on the range given
+
+Parameters:
+start    -- string of column name of the dataframe to determine the start range
+end      -- string of the column name of the dataframe to determine the end range
+data     -- pd.DataFrame object
+hue      -- string of the column name of the dataframe to define subsets of the data
+ax       -- matplotlib.pyplot.Axes object. Will use current axes if left as None
+**kwargs -- Dictionary of values that satisfy the parameters of the plot.
+"""
+
+def ranged_barplot(start, end, labels, data, hue=None, order=None, ax=None, **kwargs):
     #Get Axis
     if ax is None:
         ax = plt.gca()
