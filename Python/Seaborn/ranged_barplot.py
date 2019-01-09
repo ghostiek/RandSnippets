@@ -29,6 +29,6 @@ def ranged_barplot(start, end, labels, data, hue=None, order=None, hue_order=Non
     #Rename y-axis to have the labels there
     ax.set_yticks(range(len(data[labels])))
     ax.set_yticklabels(data[labels])
-    plt.tight_layout()
-    plt.savefig("RangedBarplot.jpg")
+    #plt.tight_layout()
+    #plt.savefig("RangedBarplot.jpg")
     plt.show()
