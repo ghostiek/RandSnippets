@@ -7,6 +7,6 @@ def get_values_from_header(df, regex_match):
     headers = list(df)
     
     for header in headers:
-        if re.match(regex_match, header):
+        if re.search(regex_match, header):
             col_names.append(header)
     return col_names
